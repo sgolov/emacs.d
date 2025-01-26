@@ -77,6 +77,7 @@
 ;; path to init modules
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+(require 'init-icomplete)
 (require 'init-style)
 (require 'init-general-package)
 (require 'init-general-dev-tools)
