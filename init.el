@@ -85,11 +85,10 @@
   (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
 (require 'init-style)
-(require 'init-generic)
-(require 'init-project-managment)
-(require 'init-progmodes)
+(require 'init-general-package)
+(require 'init-general-dev-tools)
+;;(put 'downcase-region 'disabled nil)
+;;(put 'narrow-to-region 'disabled nil)
 
-(put 'downcase-region 'disabled nil)
-
-;;; init.el ends here
 (provide 'init)
+
