@@ -77,13 +77,6 @@
 ;; path to init modules
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;;This is a simple benchmark of calls to Emacs require and load functions.
-(use-package benchmark-init
-  :ensure t
-  :config
-  ;; To disable collection of benchmark data after init is done.
-  (add-hook 'after-init-hook 'benchmark-init/deactivate))
-
 (require 'init-style)
 (require 'init-general-package)
 (require 'init-general-dev-tools)
