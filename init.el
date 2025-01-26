@@ -80,6 +80,7 @@
 (require 'init-style)
 (require 'init-general-package)
 (require 'init-general-dev-tools)
+(require 'init-corfu)
 ;;(put 'downcase-region 'disabled nil)
 ;;(put 'narrow-to-region 'disabled nil)
 
