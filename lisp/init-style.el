@@ -1,29 +1,28 @@
 ;;; init-style.el --- style packages configuration
 ;;; Commentary:
 
-;;; Code:
+;;; Code
+
+;; Modus-vivendi theme
 
 
-;;Icons
-(use-package all-the-icons
-  :if (display-graphic-p)
-  :ensure t
-  :config
-  (setq
-   all-the-icons-icon-for-buffer t
-   all-the-icons-icon-for-dir    t
-   all-the-icons-icon-for-file   t
-   all-the-icons-icon-for-mode   t
-   all-the-icons-icon-for-url    t
-   all-the-icons-install-fonts   t
-)
-  )
+;; Configure the Modus Themes' appearance
+(setq modus-themes-mode-line '(borderless)
+      modus-themes-paren-match '(bold intense)
+      modus-themes-syntax '(alt-syntax faint)
+      modus-themes-org-blocks 'gray-background)
 
-;;Theme
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
-  :config
-  (load-theme 'sanityinc-tomorrow-night))
+;; Load the dark theme by default
+(load-theme 'modus-vivendi t)
 
-;;; init-style.el ends here
+;; it dosen't work
+
+;; (use-package modus-themes
+;;   :ensure 
+;;   :config
+;;   (setq modus-themes-mode-line '(borderless))
+;;   (load-theme 'modus-vivendi t)
+;;  )         
+
+
 (provide 'init-style)
