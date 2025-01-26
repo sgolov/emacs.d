@@ -1,13 +1,12 @@
-;;; init.el --- Emacs configuration
-;;; Commentary:
+;;; init.el --- Emacs configuration 
+;;;Commentary:
 
-;; The Emacs configuration is divided into modules.
-;; This file contains the basic configuration and
-;; connection of other modules
-                                    
-;; Emacs version 28.1.
+;; Emacs version 28.2.
 
 ;;; Code:
+
+;UTF-8
+(set-default-coding-systems 'utf-8)
 
 ;; User Info
 (setq user-full-name "Sergey Golov"
@@ -20,24 +19,36 @@
 ;; each 50MB of allocated data (the default is on every 0.76MB)
 (setq gc-cons-threshold 50000000)
 
-;; Set custom file path
+;; Custom file path
 (setq custom-file
       (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
 
-;;store all backup and autosave files in the backups dir;
+;;store all backup and autosave files in the tmp dir;
 (setq backup-directory-alist
-      '((".*" . "~/.emacs.d/backups/")))
-
+      `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-      '((".*" "~/.emacs.d/backups/" t)))
+      `((".*" ,temporary-file-directory t)))
 
 ;; enable y/n answers
 (fset #'yes-or-no-p #'y-or-n-p)
 
 ;; disable startup screen
 (setq inhibit-startup-screen 't)
+
+;; Don't pop up UI dialogs when prompting
+(setq use-dialog-box nil)
+
+;; Remembering recently edited files
+(recentf-mode 1)
+
+;; Save what you enter into minibuffer prompts
+(setq history-length 30)
+(savehist-mode 1)
+
+;; Remember and restore the last cursor location of opened files
+(save-place-mode 1)
   
 ;; menu bar,tool bar and scroll bar
 (menu-bar-mode -1)
@@ -47,7 +58,7 @@
 ;; line number mode
 (setq line-nuber-mode t)
 (setq column-number-mode t)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; don't use tabs to indent, tab with = 4
 (setq-default indent-tabs-mode nil  tab-width     4)
