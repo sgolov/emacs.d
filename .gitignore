@@ -1,18 +1,19 @@
-elpa/
-backups/
-eshell/
-irony/
-.cache/
-transient/
-auto-save-list/
-
-/auto/
+elpa/*
+backups/*
+eshell/*
+.cache/*
+transient/*
+auto-save-list/*
+eln-cache/
 
 *dat
 *elc
-recentf
 *eld
+
 custom.el
+recentf
+bookmarks
+history
+places
 
-*projectile
-
+session.*
