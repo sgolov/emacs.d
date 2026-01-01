@@ -5,10 +5,13 @@ eshell/*
 transient/*
 auto-save-list/*
 eln-cache/
+.my-cache/*
 
 *dat
 *elc
 *eld
+*.desktop
+*.desktop.lock
 
 custom.el
 recentf
