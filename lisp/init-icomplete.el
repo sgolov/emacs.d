@@ -3,20 +3,19 @@
 
 ;;; Code
 
-;;(setq icomplete-delay-completions-threshold 0)
-;;(setq icomplete-max-delay-chars 0)
-;;(setq icomplete-compute-delay 0)
+
+(defun icomplete-setup()
+
+;;setup icomplete
 (setq icomplete-prospects-height 1)
-;;(setq icomplete-with-completion-tables t)
 (setq icomplete-show-matches-on-no-input t)
 (setq icomplete-hide-common-prefix nil)
-;;(setq icomplete-separator " | ")
 (setq icomplete-in-buffer t)
-;;(setq icomplete-vertical-mode nil)
 (icomplete-mode 1)
+(setq completion-styles '(basic partial-completion))
 
-;;(fido-mode nil)
+)
 
- (setq completion-styles '(basic partial-completion))
+(icomplete-setup)
 
 (provide 'init-icomplete)
