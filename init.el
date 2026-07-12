@@ -143,6 +143,9 @@
 ;; Обновление списка файлов в dired если он был изменен
 (setq global-auto-revert-non-file-buffers t)
 
+;; Привязка клавиш для скроллинга буфера
+(global-set-key (kbd "M-n") (lambda () (interactive) (scroll-up-line 1)))
+(global-set-key (kbd "M-p") (lambda () (interactive) (scroll-down-line 1)))
 
 ;; Отключить
 (menu-bar-mode -1)
