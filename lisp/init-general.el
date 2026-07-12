@@ -28,7 +28,6 @@
 
 (add-hook 'prog-mode-hook (lambda()
                             (hs-minor-mode t)
-                            (yas-minor-mode t)
                             (global-set-key (kbd "C-c h a") 'hs-show-all)
                             (global-set-key (kbd "C-c h d") 'hs-hide-all)
                             (global-set-key (kbd "C-c h c") 'hs-toggle-hiding)))
