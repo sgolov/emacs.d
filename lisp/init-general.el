@@ -24,7 +24,7 @@
 
 (require 'project)
 ;; переменная my-cache-dir дб определена в init
-;; (setq project-list-file (expand-file-name "projects" my-cache-dir))
+(setq project-list-file (expand-file-name "projects" my-cache-dir))
 
 (add-hook 'prog-mode-hook (lambda()
                             (hs-minor-mode t)
