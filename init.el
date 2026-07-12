@@ -179,6 +179,7 @@
 (require 'init-icomplete)
 (require 'init-theme)
 (require 'init-general)
+(require 'init-font)
 (require 'init-zig)
 (require 'init-org)
 ;;(require 'init-go)
