@@ -180,6 +180,7 @@
 (require 'init-theme)
 (require 'init-general)
 (require 'init-zig)
+(require 'init-org)
 ;;(require 'init-go)
 
 (provide 'init)
