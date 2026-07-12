@@ -101,7 +101,8 @@
       gc-cons-threshold 50000000)
 
 ;; Замена yes/no на y/n
-(fset #'yes-or-no-p #'y-or-n-p)
+;; (fset #'yes-or-no-p #'y-or-n-p) устаревший способ
+(setq use-short-answers t)
 
 (setq
       ;; Отключен стартовый экран
