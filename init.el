@@ -135,7 +135,13 @@
 (global-set-key (kbd "C-z") nil)
 
 ;; Размер фрейма в пикселях 
-(setq frame-resize-pixelwise t) 
+(setq frame-resize-pixelwise t)
+
+;; Обновление буфера при его изменение из других источников
+(global-auto-revert-mode t)
+;; Обновление списка файлов в dired если он был изменен
+(setq global-auto-revert-non-file-buffers t)
+
 
 ;; Отключить
 (menu-bar-mode -1)
