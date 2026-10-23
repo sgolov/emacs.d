@@ -6,9 +6,9 @@
 
 ;; key support
 (use-package which-key
-  :ensure t
+  :ensure nil
   :config
-  (which-key-mode t))
+(which-key-mode t))
 
 ;;git client
 (use-package magit
@@ -17,7 +17,7 @@
   )
 
 (use-package eglot
-  :ensure t
+  :ensure nil
   :config 
   (setq eglot-autoshutdown t) 
   (setq eglot-extend-to-xref t)   
