@@ -34,6 +34,27 @@
     ("S-<f8>" . speedbar-get-focus))
 )
 
+(use-package treesit
+  :ensure nil
+  :custom
+  (treesit-enabled-modes t) 
+  (treesit-auto-install-grammar 'ask)
+  (treesit-font-lock-level 3)
+)
+
+(defun my/toggle-treesit-level ()
+  "Циклически переключает уровень подсветки Tree-sitter (от 1 до 4)."
+  (interactive)
+  (let ((next-level (if (= treesit-font-lock-level 4) 1 (1+ treesit-font-lock-level))))
+    (setq treesit-font-lock-level next-level)
+    (treesit-font-lock-recompute-features)
+    (font-lock-flush)
+    (font-lock-ensure)
+    (message "Уровень подсветки Tree-sitter изменен на: %d" next-level))
+)
+
+(global-set-key (kbd "C-c t L") #'my/toggle-treesit-level)
+
 (require 'project)
 ;; переменная my-cache-dir дб определена в init
 (setq project-list-file (expand-file-name "projects" my-cache-dir))
