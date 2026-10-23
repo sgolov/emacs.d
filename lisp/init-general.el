@@ -23,6 +23,17 @@
   (setq eglot-extend-to-xref t)   
  )
 
+(use-package speedbar
+  :ensure nil
+  :custom 
+  (speedbar-prefer-window t)
+  (speedbar-window-default-width 35)
+  (speedbar-window-max-width 35)
+  :bind
+  (("<f8>" . speedbar-window)
+    ("S-<f8>" . speedbar-get-focus))
+)
+
 (require 'project)
 ;; переменная my-cache-dir дб определена в init
 (setq project-list-file (expand-file-name "projects" my-cache-dir))
