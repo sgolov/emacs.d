@@ -9,16 +9,20 @@
   :defer t
   :init 
   (icomplete-mode 1)
-  :config
-  (icomplete-vertical-mode 1)
-  (setq icomplete-prospects-height 1)
-  (setq icomplete-show-matches-on-no-input t)
-  (setq icomplete-hide-common-prefix nil)
-  (setq icomplete-in-buffer t)
-  (setq completion-styles '(basic partial-completion))
-  (setq read-buffer-completion-ignore-case t)
-  (setq read-file-name-completion-ignore-case t)
-  (advice-add 'completion-at-point :after #'minibuffer-hide-completions)
-)
+  :custom
+  (icomplete-prospects-height 1)
+  (icomplete-show-matches-on-no-input t)
+  (icomplete-hide-common-prefix nil)
+  (icomplete-in-buffer t)
+  (completion-styles '(basic partial-completion))
+  (read-buffer-completion-ignore-case t)
+  (read-file-name-completion-ignore-case t)
 
+  :bind 
+  ;; Переназначаем клавиши ТАК, чтобы они работали именно внутри вертикального меню:
+  (:map icomplete-minibuffer-map
+      ;;  ("TAB" . icomplete-force-complete)           ; Умное автодополнение без исчезновения строк
+        ("RET" . icomplete-force-complete-and-exit)  ; Выбрать вариант и нажать Enter
+  )
+)
 (provide 'init-icomplete)
