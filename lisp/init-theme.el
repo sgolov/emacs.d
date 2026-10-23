@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; init-theme.el --- theme packages configuration
 ;;; Commentary:
 

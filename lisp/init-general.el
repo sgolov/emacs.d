@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; init-general.el --- general packages configuration
 ;;; Commentary:
 

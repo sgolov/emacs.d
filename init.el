@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; init.el --- Rework emacs configuration
 ;;; Commentary:
 

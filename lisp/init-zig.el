@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; init-zig.el --- init zig mode
 ;;; Commentary: -
 
